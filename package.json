@@ -1,0 +1,22 @@
+{
+  "name": "stitch-corporate-tech-student-portfolio",
+  "version": "1.0.0",
+  "description": "Full-stack Corporate Tech Student Portfolio (Pushpa Rani) with React + Vite frontend and Node.js + Express backend",
+  "scripts": {
+    "install:all": "npm --prefix backend install && npm --prefix frontend install",
+    "dev:backend": "npm --prefix backend run dev",
+    "start:backend": "npm --prefix backend start",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "build:frontend": "npm --prefix frontend run build"
+  },
+  "keywords": [
+    "react",
+    "vite",
+    "express",
+    "fullstack",
+    "mongodb",
+    "portfolio"
+  ],
+  "author": "Pushpa Rani",
+  "license": "ISC"
+}

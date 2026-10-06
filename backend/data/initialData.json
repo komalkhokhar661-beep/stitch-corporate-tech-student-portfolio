@@ -1,0 +1,299 @@
+{
+  "profile": {
+    "name": "Pushpa Rani",
+    "headline": "BBA Student | Data Analytics & AI Enthusiast",
+    "subHeadline": "Turning data, creativity and technology into meaningful business solutions.",
+    "roleBadge": "BBA STUDENT • DATA ANALYTICS • AI",
+    "bio": "I am a BBA student with an interest in data analytics, business problem-solving, digital innovation and AI-assisted workflows. I enjoy combining analytical thinking with creativity to build practical solutions and meaningful digital experiences.",
+    "email": "2405301078@geetauniversity.edu.in",
+    "linkedin": "https://www.linkedin.com/in/pushpa-rani-36b652a9",
+    "stats": [
+      { "id": "cgpa", "value": "8.77", "label": "CGPA", "suffix": "/ 10" },
+      { "id": "program", "value": "BBA", "label": "Student", "suffix": "Undergrad" },
+      { "id": "focus", "value": "Data Analytics", "label": "Core Interest", "suffix": "Specialization" }
+    ],
+    "floatingBadges": [
+      { "id": "badge-1", "label": "Power BI & Excel", "icon": "analytics", "position": "top-left" },
+      { "id": "badge-2", "label": "Data Analytics", "icon": "query_stats", "position": "bottom-left" },
+      { "id": "badge-3", "label": "AI Tools", "icon": "smart_toy", "position": "bottom-right" }
+    ]
+  },
+  "aboutHighlights": [
+    {
+      "id": "business-management",
+      "icon": "business_center",
+      "title": "Business & Management",
+      "description": "Core organizational understanding, business problem solving, structured analysis applied to practical organizational challenges.",
+      "tag": "Strategic Foundations"
+    },
+    {
+      "id": "data-analytics",
+      "icon": "insights",
+      "title": "Data & Analytics",
+      "description": "Transforming business and financial numbers into visual, decision-friendly dashboards with Power BI and Microsoft Excel.",
+      "tag": "Insights & Reporting"
+    },
+    {
+      "id": "ai-tools",
+      "icon": "psychology",
+      "title": "AI & Emerging Tools",
+      "description": "Leveraging generative intelligence, prompt engineering, and visual authoring tools to accelerate problem-solving and ideation.",
+      "tag": "Workflow Acceleration"
+    }
+  ],
+  "skills": [
+    {
+      "category": "Business & Management",
+      "badge": "Organizational Foundations",
+      "icon": "corporate_fare",
+      "items": [
+        "Business Analysis",
+        "Management",
+        "Communication",
+        "Leadership",
+        "Teamwork"
+      ]
+    },
+    {
+      "category": "Data & Analytics",
+      "badge": "Analysis & Reporting",
+      "icon": "query_stats",
+      "items": [
+        "Power BI",
+        "Microsoft Excel",
+        "Dashboard Design",
+        "Data Interpretation",
+        "Financial Data"
+      ]
+    },
+    {
+      "category": "AI & Digital Tools",
+      "badge": "Applied Intelligence",
+      "icon": "psychology",
+      "items": [
+        "Microsoft Copilot",
+        "Google Gemini",
+        "Claude",
+        "AI-assisted Workflows",
+        "Canva",
+        "Prompt Engineering"
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "id": "talentgro-2025",
+      "role": "Data Analytics Intern",
+      "badge": "Best Intern — 2025 Cohort",
+      "company": "TalentGro Global, Chandigarh",
+      "period": "June 2025 – September 2025",
+      "description": "Worked with financial and business data and developed dashboards using Power BI and Microsoft Excel. Presented analytical insights to leadership, supported data-driven decision-making, mentored new interns, and was recognized as Best Intern of the 2025 cohort.",
+      "competencies": [
+        { "label": "Financial & Business Data", "icon": "insights" },
+        { "label": "Power BI & Excel Dashboards", "icon": "bar_chart" },
+        { "label": "Analytical Presentation", "icon": "present_to_all" },
+        { "label": "Mentoring & Collaboration", "icon": "groups" }
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "skyrouter-ai",
+      "number": "PROJECT 01",
+      "badge": "AI Product Concept",
+      "title": "SkyRouter AI",
+      "subtitle": "AI-Powered Travel Planning Platform",
+      "category": "AI Product Concept",
+      "description": "An AI-assisted travel planning platform concept designed to help users explore destinations, budgets, travel preferences and trip durations through an interactive planning experience.",
+      "tags": ["AI", "Web Design", "Travel Planning"],
+      "meta": "Conceptual Prototype",
+      "visualType": "flight_card",
+      "visualData": {
+        "title": "SkyRouter Itinerary & Budget Engine",
+        "destination": "Kyoto & Tokyo",
+        "budgetTier": "Optimal AI",
+        "duration": "7 Days Plan",
+        "statusBadge": "AI Assisted Workflow",
+        "conceptBadge": "Interactive Concept"
+      },
+      "caseStudy": {
+        "overview": "SkyRouter AI is an end-to-end conceptual product designed to bridge traveler preferences with algorithmic itinerary synthesis. The project focuses on structured parameter inputs—destination intent, budgetary constraints, and temporal availability.",
+        "objectives": [
+          "Eliminate manual travel research fragmentation through consolidated AI itinerary logic.",
+          "Provide dynamic tier benchmarking between luxury, balanced, and budget paths.",
+          "Architect an intuitive, high-legibility interface suitable for web and mobile devices."
+        ],
+        "technologies": ["Generative AI Logic", "User Experience Flow", "Workflow Prototyping"],
+        "keyDeliverables": [
+          "Interactive Multi-parameter Input System",
+          "Automated Schedule & Route Breakdown",
+          "Budget Optimization Matrix"
+        ]
+      }
+    },
+    {
+      "id": "business-analytics-dashboard",
+      "number": "PROJECT 02",
+      "badge": "BI Analytics",
+      "title": "Business Analytics Dashboard",
+      "subtitle": "Power BI & Excel Reporting",
+      "category": "BI Analytics",
+      "description": "Interactive dashboards developed using Power BI and Microsoft Excel to transform business and financial data into clear visual insights.",
+      "tags": ["Power BI", "Excel", "Data Analytics"],
+      "meta": "Visual Reporting",
+      "visualType": "chart_svg",
+      "visualData": {
+        "title": "Business Performance BI Suite",
+        "badgeLeft": "Excel Data Modeling",
+        "badgeRight": "Interactive Power BI"
+      },
+      "caseStudy": {
+        "overview": "Designed and deployed comprehensive analytical dashboards to synthesize corporate performance metrics, expense trends, and operational revenue targets into executive-ready visualizations.",
+        "objectives": [
+          "Convert raw spreadsheet records into normalized relational data models.",
+          "Build intuitive interactive drill-downs across quarterly timelines and divisions.",
+          "Accelerate strategic managerial evaluation through clear KPI indicator scorecards."
+        ],
+        "technologies": ["Power BI", "Advanced Excel (Power Query, DAX)", "Data Visualization"],
+        "keyDeliverables": [
+          "Executive Summary KPI Board",
+          "Comparative Financial Trend Visualizer",
+          "Departmental Performance Heatmaps"
+        ]
+      }
+    },
+    {
+      "id": "financial-ratio-analysis",
+      "number": "PROJECT 03",
+      "badge": "Finance & Analysis",
+      "title": "Financial Statement & Ratio Analysis",
+      "subtitle": "Academic Business Finance",
+      "category": "Finance & Analysis",
+      "description": "An academic business-finance project focused on understanding financial statements, calculating key financial ratios and interpreting business performance.",
+      "tags": ["Finance", "Accounting", "Analysis"],
+      "meta": "Academic Business Finance",
+      "visualType": "ratio_matrix",
+      "visualData": {
+        "title": "Ratio Synthesis & Solvency Matrix",
+        "col1Title": "LIQUIDITY & SOLVENCY",
+        "col1Value": "Current & Quick Ratios",
+        "col2Title": "PROFITABILITY",
+        "col2Value": "Operating Margins",
+        "badgeLeft": "Balance Sheet & P&L",
+        "badgeRight": "Ratio Benchmarking"
+      },
+      "caseStudy": {
+        "overview": "A rigorous financial audit and ratio evaluation framework conducted on standard corporate balance sheets, income statements, and cash flow statements.",
+        "objectives": [
+          "Assess solvency and short-term liquidity through Current and Quick ratio diagnostics.",
+          "Examine operating margin efficiency and return on invested capital.",
+          "Synthesize cross-period comparative findings into actionable managerial summaries."
+        ],
+        "technologies": ["Financial Modeling", "Corporate Accounting", "Variance Diagnostics"],
+        "keyDeliverables": [
+          "Financial Statement Normalization Workbook",
+          "Multi-Ratio Synthesis Scorecard",
+          "Capital Structure Risk Assessment Report"
+        ]
+      }
+    },
+    {
+      "id": "novatech-case-study",
+      "number": "PROJECT 04",
+      "badge": "Management Case Study",
+      "title": "NovaTech Case Study",
+      "subtitle": "Organizational Analysis",
+      "category": "Case Study",
+      "description": "An academic management case study examining employee dissatisfaction, workplace issues and managerial decision-making in a manufacturing organization.",
+      "tags": ["Business Management", "Case Study", "Decision Making"],
+      "meta": "Managerial Decision-Making",
+      "visualType": "framework_cards",
+      "visualData": {
+        "title": "NovaTech Organizational Diagnosis",
+        "box1Title": "Workplace Issues",
+        "box1Subtitle": "Friction & Retention",
+        "box2Title": "Managerial Framework",
+        "box2Subtitle": "Intervention Design",
+        "badgeLeft": "Manufacturing Context",
+        "badgeRight": "Actionable Strategy"
+      },
+      "caseStudy": {
+        "overview": "An organizational behavior and managerial strategy investigation targeting persistent workforce attrition and communication bottlenecks at NovaTech manufacturing plants.",
+        "objectives": [
+          "Diagnose root causes behind frontline employee disengagement and supervisor friction.",
+          "Formulate structural interventions aligning incentives and feedback mechanisms.",
+          "Deliver an executive decision-making roadmap for operational turnaround."
+        ],
+        "technologies": ["Organizational Behavior Theory", "Strategic Leadership", "Root Cause Analysis"],
+        "keyDeliverables": [
+          "Turnaround Proposal & Timeline",
+          "Employee Engagement Metric Dashboard",
+          "Managerial Communication Protocol"
+        ]
+      }
+    }
+  ],
+  "education": [
+    {
+      "id": "bba",
+      "degree": "Bachelor of Business Administration (BBA)",
+      "institution": "Geeta University, Panipat",
+      "period": "2024 – 2027",
+      "cgpa": "8.77 / 10",
+      "focus": "Academic Focus: Business, Data Analytics & Digital Technologies",
+      "icon": "school"
+    },
+    {
+      "id": "class-12",
+      "degree": "Class XII",
+      "institution": "DAV Police Public School, Panipat",
+      "period": "2023",
+      "score": "79.2%",
+      "focus": "Secondary Senior Education with strong analytical and commerce foundation.",
+      "icon": "history_edu"
+    },
+    {
+      "id": "class-10",
+      "degree": "Class X",
+      "institution": "DAV Police Public School, Panipat",
+      "period": "2021",
+      "score": "92%",
+      "focus": "Foundational secondary schooling with exemplary distinction across mathematics and sciences.",
+      "icon": "menu_book"
+    }
+  ],
+  "achievements": [
+    {
+      "id": "best-intern",
+      "title": "Best Intern — 2025 Cohort",
+      "subtitle": "TalentGro Global, Chandigarh",
+      "description": "Honored with the top performer distinction for delivering high-impact business and financial dashboards and mentoring peers.",
+      "tag": "Professional Honor",
+      "icon": "workspace_premium"
+    },
+    {
+      "id": "cgpa-distinction",
+      "title": "Academic Performance — 8.77 CGPA",
+      "subtitle": "Geeta University, Panipat",
+      "description": "Maintained consistent academic distinction and top-tier standing throughout Bachelor of Business Administration coursework.",
+      "tag": "Academic Distinction",
+      "icon": "grade"
+    },
+    {
+      "id": "prompt-engineering",
+      "title": "Prompt Engineering Certification",
+      "subtitle": "Applied Generative AI & Workflows",
+      "description": "Certified proficiency in structuring context, instructions, and automated workflows across LLMs to optimize business analysis.",
+      "tag": "Technical Certification",
+      "icon": "neurology"
+    },
+    {
+      "id": "leadership",
+      "title": "Leadership & Teamwork",
+      "subtitle": "Intern Mentorship & Case Leadership",
+      "description": "Demonstrated capability leading academic project cohorts and onboarding and guiding new interns during industry engagements.",
+      "tag": "Leadership Impact",
+      "icon": "groups"
+    }
+  ]
+}
