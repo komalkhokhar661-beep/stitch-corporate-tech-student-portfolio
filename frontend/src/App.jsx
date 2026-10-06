@@ -13,15 +13,24 @@ import ProjectModal from './components/ui/ProjectModal';
 import ResumeModal from './components/ui/ResumeModal';
 import Toast from './components/ui/Toast';
 import { api } from './services/api';
+import {
+  initialProfile,
+  initialAboutHighlights,
+  initialSkills,
+  initialExperience,
+  initialProjects,
+  initialEducation,
+  initialAchievements
+} from './data/portfolioData';
 
 export default function App() {
-  const [profile, setProfile] = useState(null);
-  const [aboutHighlights, setAboutHighlights] = useState([]);
-  const [education, setEducation] = useState([]);
-  const [experience, setExperience] = useState([]);
-  const [achievements, setAchievements] = useState([]);
-  const [skills, setSkills] = useState([]);
-  const [projects, setProjects] = useState([]);
+  const [profile, setProfile] = useState(initialProfile);
+  const [aboutHighlights, setAboutHighlights] = useState(initialAboutHighlights);
+  const [education, setEducation] = useState(initialEducation);
+  const [experience, setExperience] = useState(initialExperience);
+  const [achievements, setAchievements] = useState(initialAchievements);
+  const [skills, setSkills] = useState(initialSkills);
+  const [projects, setProjects] = useState(initialProjects);
 
   const [loading, setLoading] = useState(true);
   const [backendConnected, setBackendConnected] = useState(false);
