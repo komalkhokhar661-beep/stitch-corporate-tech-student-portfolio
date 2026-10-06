@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Full-stack Corporate Tech Student Portfolio (Pushpa Rani) with React + Vite frontend and Node.js + Express backend",
   "scripts": {
+    "build": "npm --prefix frontend install && npm --prefix frontend run build",
+    "start": "node backend/server.js",
+    "dev": "npm --prefix frontend run dev",
     "install:all": "npm --prefix backend install && npm --prefix frontend install",
     "dev:backend": "npm --prefix backend run dev",
     "start:backend": "npm --prefix backend start",
