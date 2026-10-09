@@ -1,21 +1,21 @@
 // Authentic portfolio seed data for resilient offline and CDN hosting
 export const initialProfile = {
   name: "Pushpa Rani",
-  headline: "BBA Student | Data Analytics & AI Enthusiast",
-  subHeadline: "Turning data, creativity and technology into meaningful business solutions.",
-  roleBadge: "BBA STUDENT • DATA ANALYTICS • AI",
-  bio: "I am a BBA student with an interest in data analytics, business problem-solving, digital innovation and AI-assisted workflows. I enjoy combining analytical thinking with creativity to build practical solutions and meaningful digital experiences.",
-  email: "2405301078@geetauniversity.edu.in",
-  linkedin: "https://www.linkedin.com/in/pushpa-rani-36b652a9",
+  headline: "BBA • Data Analytics & AI Specialist",
+  subHeadline: "Synthesizing quantitative business acumen with modern data architectures, Power BI intelligence, and enterprise AI workflows.",
+  roleBadge: "AI × DATA ANALYTICS × BUSINESS TECHNOLOGY",
+  bio: "I am a Bachelor of Business Administration (BBA) scholar with a focus on data analytics, business systems intelligence, and AI-assisted workflows. Combining analytical rigor with creative problem-solving, I engineer interactive executive dashboards, analyze corporate datasets, and design high-impact digital solutions.",
+  email: "pushparani10290@gmail.com",
+  linkedin: "https://www.linkedin.com/in/pushpa-rani-36b6052a9/",
   stats: [
-    { id: "cgpa", value: "8.77", label: "CGPA", suffix: "/ 10" },
-    { id: "program", value: "BBA", label: "Student", suffix: "Undergrad" },
-    { id: "focus", value: "Data Analytics", label: "Core Interest", suffix: "Specialization" }
+    { id: "cgpa", value: "8.77", label: "CGPA Distinction", suffix: "/ 10" },
+    { id: "program", value: "BBA", label: "Undergraduate", suffix: "Geeta Univ" },
+    { id: "focus", value: "Data & AI", label: "Core Specialization", suffix: "Analytics" }
   ],
   floatingBadges: [
     { id: "badge-1", label: "Power BI & Excel", icon: "analytics", position: "top-left" },
     { id: "badge-2", label: "Data Analytics", icon: "query_stats", position: "bottom-left" },
-    { id: "badge-3", label: "AI Tools", icon: "smart_toy", position: "bottom-right" }
+    { id: "badge-3", label: "Generative AI", icon: "smart_toy", position: "bottom-right" }
   ]
 };
 
@@ -24,61 +24,71 @@ export const initialAboutHighlights = [
     id: "business-management",
     icon: "business_center",
     title: "Business & Management",
-    description: "Core organizational understanding, business problem solving, structured analysis applied to practical organizational challenges.",
+    description: "Core organizational principles, supply chain awareness, operational workflows, and structured root-cause diagnosis applied to enterprise business challenges.",
     tag: "Strategic Foundations"
   },
   {
     id: "data-analytics",
     icon: "insights",
     title: "Data & Analytics",
-    description: "Transforming business and financial numbers into visual, decision-friendly dashboards with Power BI and Microsoft Excel.",
-    tag: "Insights & Reporting"
+    description: "Transforming complex operational and financial spreadsheets into interactive, decision-grade Power BI dashboards and normalized relational models.",
+    tag: "Intelligence & BI"
   },
   {
     id: "ai-tools",
     icon: "psychology",
-    title: "AI & Emerging Tools",
-    description: "Leveraging generative intelligence, prompt engineering, and visual authoring tools to accelerate problem-solving and ideation.",
-    tag: "Workflow Acceleration"
+    title: "AI & Modern Technology",
+    description: "Deploying generative AI tooling, structured prompt engineering, and automated workflows to accelerate business analysis and executive ideation.",
+    tag: "AI-Native Execution"
   }
 ];
 
 export const initialSkills = [
   {
-    category: "Business & Management",
-    badge: "Organizational Foundations",
-    icon: "corporate_fare",
-    items: [
-      "Business Analysis",
-      "Management",
-      "Communication",
-      "Leadership",
-      "Teamwork"
-    ]
-  },
-  {
-    category: "Data & Analytics",
-    badge: "Analysis & Reporting",
+    category: "ANALYTICS",
+    badge: "Business Intelligence & Data Modeling",
     icon: "query_stats",
+    accent: "blue",
     items: [
       "Power BI",
-      "Microsoft Excel",
-      "Dashboard Design",
-      "Data Interpretation",
-      "Financial Data"
+      "Excel",
+      "Data Analysis",
+      "Dashboard Design"
     ]
   },
   {
-    category: "AI & Digital Tools",
-    badge: "Applied Intelligence",
-    icon: "psychology",
+    category: "AI & TECHNOLOGY",
+    badge: "Applied Intelligence & Automation",
+    icon: "smart_toy",
+    accent: "violet",
     items: [
-      "Microsoft Copilot",
-      "Google Gemini",
-      "Claude",
-      "AI-assisted Workflows",
+      "AI Tools",
+      "Prompt Engineering",
+      "Generative AI",
+      "AI-assisted workflows"
+    ]
+  },
+  {
+    category: "BUSINESS",
+    badge: "Strategy & Operational Foundations",
+    icon: "corporate_fare",
+    accent: "cyan",
+    items: [
+      "Business Administration",
+      "Operations",
+      "Supply Chain",
+      "Business Strategy"
+    ]
+  },
+  {
+    category: "DESIGN",
+    badge: "Visual Storytelling & Executive Presentations",
+    icon: "palette",
+    accent: "emerald",
+    items: [
       "Canva",
-      "Prompt Engineering"
+      "Presentation Design",
+      "Visual Storytelling"
     ]
   }
 ];
@@ -107,10 +117,10 @@ export const initialProjects = [
     badge: "AI Product Concept",
     title: "SkyRouter AI",
     subtitle: "AI-Powered Travel Planning Platform",
-    category: "AI Product Concept",
+    category: "AI & Technology",
     description: "An AI-assisted travel planning platform concept designed to help users explore destinations, budgets, travel preferences and trip durations through an interactive planning experience.",
-    tags: ["AI", "Web Design", "Travel Planning"],
-    meta: "Conceptual Prototype",
+    tags: ["AI Tools", "Generative AI", "Workflow Design", "Travel Intelligence"],
+    meta: "Interactive Conceptual Prototype",
     visualType: "flight_card",
     visualData: {
       title: "SkyRouter Itinerary & Budget Engine",
@@ -127,7 +137,7 @@ export const initialProjects = [
         "Provide dynamic tier benchmarking between luxury, balanced, and budget paths.",
         "Architect an intuitive, high-legibility interface suitable for web and mobile devices."
       ],
-      technologies: ["Generative AI Logic", "User Experience Flow", "Workflow Prototyping"],
+      technologies: ["Generative AI Logic", "User Experience Flow", "Prompt Engineering"],
       keyDeliverables: [
         "Interactive Multi-parameter Input System",
         "Automated Schedule & Route Breakdown",
@@ -141,10 +151,10 @@ export const initialProjects = [
     badge: "BI Analytics",
     title: "Business Analytics Dashboard",
     subtitle: "Power BI & Excel Reporting",
-    category: "BI Analytics",
+    category: "Analytics",
     description: "Interactive dashboards developed using Power BI and Microsoft Excel to transform business and financial data into clear visual insights.",
-    tags: ["Power BI", "Excel", "Data Analytics"],
-    meta: "Visual Reporting",
+    tags: ["Power BI", "Excel", "Data Analysis", "Dashboard Design"],
+    meta: "Executive Visual Reporting",
     visualType: "chart_svg",
     visualData: {
       title: "Business Performance BI Suite",
@@ -158,7 +168,7 @@ export const initialProjects = [
         "Build intuitive interactive drill-downs across quarterly timelines and divisions.",
         "Accelerate strategic managerial evaluation through clear KPI indicator scorecards."
       ],
-      technologies: ["Power BI", "Advanced Excel (Power Query, DAX)", "Data Visualization"],
+      technologies: ["Power BI", "Advanced Excel (Power Query, DAX)", "Dashboard Design"],
       keyDeliverables: [
         "Executive Summary KPI Board",
         "Comparative Financial Trend Visualizer",
@@ -169,12 +179,12 @@ export const initialProjects = [
   {
     id: "financial-ratio-analysis",
     number: "PROJECT 03",
-    badge: "Finance & Analysis",
+    badge: "Finance & Analytics",
     title: "Financial Statement & Ratio Analysis",
     subtitle: "Academic Business Finance",
-    category: "Finance & Analysis",
+    category: "Analytics",
     description: "An academic business-finance project focused on understanding financial statements, calculating key financial ratios and interpreting business performance.",
-    tags: ["Finance", "Accounting", "Analysis"],
+    tags: ["Financial Analysis", "Excel", "Business Strategy", "Accounting"],
     meta: "Academic Business Finance",
     visualType: "ratio_matrix",
     visualData: {
@@ -204,12 +214,12 @@ export const initialProjects = [
   {
     id: "novatech-case-study",
     number: "PROJECT 04",
-    badge: "Management Case Study",
+    badge: "Business Case Study",
     title: "NovaTech Case Study",
     subtitle: "Organizational Analysis",
-    category: "Case Study",
+    category: "Business",
     description: "An academic management case study examining employee dissatisfaction, workplace issues and managerial decision-making in a manufacturing organization.",
-    tags: ["Business Management", "Case Study", "Decision Making"],
+    tags: ["Business Administration", "Operations", "Business Strategy", "Decision Making"],
     meta: "Managerial Decision-Making",
     visualType: "framework_cards",
     visualData: {
@@ -245,7 +255,7 @@ export const initialEducation = [
     institution: "Geeta University, Panipat",
     period: "2024 – 2027",
     cgpa: "CGPA: 8.77 / 10",
-    focus: "Academic Focus: Business, Data Analytics & Digital Technologies",
+    focus: "Academic Focus: Business Administration, Data Analytics & Digital Technologies",
     icon: "school"
   },
   {
@@ -254,7 +264,7 @@ export const initialEducation = [
     institution: "DAV Police Public School, Panipat",
     period: "2023",
     score: "Score: 79.2%",
-    focus: "Secondary Senior Education with strong analytical and commerce foundation.",
+    focus: "Secondary Senior Education with strong analytical, mathematical, and commerce foundation.",
     icon: "history_edu"
   },
   {
@@ -273,7 +283,7 @@ export const initialAchievements = [
     id: "best-intern",
     title: "Best Intern — 2025 Cohort",
     subtitle: "TalentGro Global, Chandigarh",
-    description: "Honored with the top performer distinction for delivering high-impact business and financial dashboards and mentoring peers.",
+    description: "Honored with top performer distinction for delivering high-impact business and financial dashboards and mentoring peers.",
     tag: "Professional Honor",
     icon: "workspace_premium"
   },
@@ -291,7 +301,7 @@ export const initialAchievements = [
     subtitle: "Applied Generative AI & Workflows",
     description: "Certified proficiency in structuring context, instructions, and automated workflows across LLMs to optimize business analysis.",
     tag: "Technical Certification",
-    icon: "neurology"
+    icon: "psychology"
   },
   {
     id: "leadership",

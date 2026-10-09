@@ -88,7 +88,7 @@ export default function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-surface flex flex-col font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+    <div className="min-h-screen bg-surface text-on-surface flex flex-col font-body selection:bg-primary/10 selection:text-primary">
       {/* Top Fixed Navigation */}
       <Navbar backendConnected={backendConnected} />
 

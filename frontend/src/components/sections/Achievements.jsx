@@ -4,33 +4,37 @@ export default function Achievements({ achievements }) {
   const defaultAchievements = [
     {
       id: "best-intern",
+      index: "01",
       title: "Best Intern — 2025 Cohort",
       subtitle: "TalentGro Global, Chandigarh",
-      description: "Honored with the top performer distinction for delivering high-impact business and financial dashboards and mentoring peers.",
+      description: "Honored with top-performer distinction across the entire 2025 intern cohort for delivering high-impact business dashboards in Power BI and mentoring incoming peers.",
       tag: "Professional Honor",
       icon: "workspace_premium"
     },
     {
       id: "cgpa-distinction",
-      title: "Academic Performance — 8.77 CGPA",
+      index: "02",
+      title: "Academic Distinction — 8.77 CGPA",
       subtitle: "Geeta University, Panipat",
       description: "Maintained consistent academic distinction and top-tier standing throughout Bachelor of Business Administration coursework.",
-      tag: "Academic Distinction",
+      tag: "Academic Standing",
       icon: "grade"
     },
     {
       id: "prompt-engineering",
+      index: "03",
       title: "Prompt Engineering Certification",
       subtitle: "Applied Generative AI & Workflows",
-      description: "Certified proficiency in structuring context, instructions, and automated workflows across LLMs to optimize business analysis.",
+      description: "Certified proficiency in structuring instructions, context architectures, and automated LLM workflows to accelerate business data analysis.",
       tag: "Technical Certification",
-      icon: "neurology"
+      icon: "psychology"
     },
     {
       id: "leadership",
-      title: "Leadership & Teamwork",
-      subtitle: "Intern Mentorship & Case Leadership",
-      description: "Demonstrated capability leading academic project cohorts and onboarding and guiding new interns during industry engagements.",
+      index: "04",
+      title: "Leadership & Intern Mentorship",
+      subtitle: "Peer Onboarding & Case Coordination",
+      description: "Demonstrated executive capability leading academic project cohorts and onboarding new interns during industry analytics engagements.",
       tag: "Leadership Impact",
       icon: "groups"
     }
@@ -39,50 +43,59 @@ export default function Achievements({ achievements }) {
   const list = achievements && achievements.length > 0 ? achievements : defaultAchievements;
 
   return (
-    <section className="w-full max-w-[80rem] mx-auto px-margin-mobile lg:px-margin py-space-xl lg:py-space-2xl" id="achievements">
-      <div className="flex flex-col gap-space-xl">
+    <section className="w-full max-w-[82rem] mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-28" id="achievements">
+      <div className="flex flex-col gap-10 sm:gap-14">
         {/* Section Header */}
-        <div className="flex flex-col gap-space-xs max-w-xl">
-          <div className="inline-flex items-center gap-2 text-primary font-code-badge text-xs tracking-wider uppercase font-semibold">
-            <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-            Honors &amp; Milestones
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 border-b border-slate-200/90">
+          <div className="flex flex-col gap-2 max-w-xl">
+            <div className="inline-flex items-center gap-2 text-blue-700 font-mono text-xs tracking-wider uppercase font-semibold">
+              <span className="w-1.5 h-1.5 rounded-full bg-blue-600 shadow-[0_0_6px_#2563eb]" />
+              06 / Recognitions &amp; Milestones
+            </div>
+            <h2 className="font-headline font-bold font-section-headline text-slate-950 tracking-tight">
+              Honors &amp; <span className="text-blue-600">Certifications</span>
+            </h2>
           </div>
-          <h2 className="font-display font-bold text-3xl sm:text-4xl text-on-surface">
-            Achievements &amp; Recognition
-          </h2>
-          <p className="font-body text-sm sm:text-base text-on-surface-variant">
-            Recognized accomplishments in professional internships, academic distinction, and AI competencies.
+          <p className="font-body text-sm sm:text-base text-slate-600 max-w-md">
+            Grounded recognitions earned through corporate analytics internships, top-tier academic standing, and applied generative AI credentials.
           </p>
         </div>
 
-        {/* 4 Concise Verified Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
-          {list.map((item) => (
+        {/* 4 Verified Editorial Cards Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+          {list.map((item, idx) => (
             <div
               key={item.id}
-              className="bg-surface-container-lowest p-space-lg rounded-3xl shadow-sm border border-outline-variant/30 flex flex-col justify-between gap-space-md hover:shadow-md hover:border-primary/30 transition-all duration-300"
+              className="bg-white p-6 sm:p-7 rounded-3xl border border-slate-200/90 shadow-subtle flex flex-col justify-between gap-6 transition-all duration-300 hover:shadow-elevated hover:border-blue-300 hover:-translate-y-1 group"
             >
-              <div className="flex flex-col gap-3">
-                <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary">
-                  <span className="material-symbols-outlined text-[26px]">
-                    {item.icon}
+              <div className="flex flex-col gap-4">
+                <div className="flex items-center justify-between pb-2 border-b border-slate-100">
+                  <span className="font-mono text-xs font-bold text-blue-600 bg-blue-50 border border-blue-200/80 px-2 py-0.5 rounded-md">
+                    {item.index || `0${idx + 1}`}
                   </span>
+                  <div className="w-9 h-9 rounded-xl bg-blue-50 text-blue-600 border border-blue-100 flex items-center justify-center">
+                    <span className="material-symbols-outlined text-[20px]">
+                      {item.icon}
+                    </span>
+                  </div>
                 </div>
+
                 <div className="flex flex-col gap-1">
-                  <h3 className="font-display font-bold text-base text-on-surface">
+                  <h3 className="font-headline font-bold text-base sm:text-lg text-slate-950 group-hover:text-blue-600 transition-colors">
                     {item.title}
                   </h3>
-                  <p className="font-display text-xs font-semibold text-primary">
+                  <p className="font-headline text-xs font-semibold text-blue-600">
                     {item.subtitle}
                   </p>
                 </div>
-                <p className="font-body text-xs text-on-surface-variant leading-relaxed">
+
+                <p className="font-body text-xs text-slate-600 leading-relaxed">
                   {item.description}
                 </p>
               </div>
 
-              <div className="pt-2 border-t border-outline-variant/20 flex items-center gap-1.5 text-xs font-code-badge text-secondary">
-                <span className="material-symbols-outlined text-[15px] text-primary">
+              <div className="pt-3 border-t border-slate-100 flex items-center gap-1.5 text-xs font-mono text-slate-500">
+                <span className="material-symbols-outlined text-[15px] text-blue-600">
                   verified
                 </span>
                 <span>{item.tag}</span>

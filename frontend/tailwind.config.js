@@ -8,42 +8,63 @@ export default {
   theme: {
     extend: {
       colors: {
-        "surface": "#f8f9ff",
-        "surface-dim": "#cbdbf5",
-        "surface-bright": "#f8f9ff",
-        "surface-container-lowest": "#ffffff",
-        "surface-container-low": "#eff4ff",
-        "surface-container": "#e5eeff",
-        "surface-container-high": "#dce9ff",
-        "surface-container-highest": "#d3e4fe",
-        "surface-variant": "#d3e4fe",
-        "on-surface": "#0b1c30",
-        "on-surface-variant": "#434655",
-        "inverse-surface": "#213145",
-        "inverse-on-surface": "#eaf1ff",
-        "outline": "#747686",
-        "outline-variant": "#c4c5d7",
-        "primary": "#0037b0",
-        "primary-container": "#1d4ed8",
-        "on-primary": "#ffffff",
-        "on-primary-container": "#cad3ff",
-        "primary-fixed": "#dce1ff",
-        "primary-fixed-dim": "#b7c4ff",
-        "on-primary-fixed": "#001551",
-        "secondary": "#565e74",
-        "secondary-container": "#dae2fd",
-        "on-secondary": "#ffffff",
-        "on-secondary-fixed": "#131b2e",
-        "on-secondary-container": "#5c647a",
-        "tertiary": "#004870",
-        "tertiary-container": "#006194",
-        "on-tertiary-container": "#b2d9ff",
-        "error": "#ba1a1a",
-        "error-container": "#ffdad6"
+        // Premium Light Theme Palette — Warm Alabaster / Ivory / Graphite System
+        "surface": "#FAF9F5",
+        "surface-dim": "#F4F3EE",
+        "surface-bright": "#FFFFFF",
+        "surface-container-lowest": "#FFFFFF",
+        "surface-container-low": "#F8F8F5",
+        "surface-container": "#F1F0EB",
+        "surface-container-high": "#E8E7E0",
+        "surface-container-highest": "#DFDED7",
+        "surface-variant": "#EEEEEE",
+        
+        // High Contrast Refined Typography
+        "on-surface": "#111827",
+        "on-surface-variant": "#4B5563",
+        "on-surface-subtle": "#6B7280",
+        "inverse-surface": "#111827",
+        "inverse-on-surface": "#FAF9F5",
+        
+        // Hairline Architectural Borders
+        "outline": "rgba(17, 24, 39, 0.08)",
+        "outline-variant": "rgba(17, 24, 39, 0.04)",
+        "outline-glow": "rgba(29, 78, 216, 0.25)",
+
+        // Primary: Refined Electric Cobalt / Royal Blue
+        "primary": "#1D4ED8",
+        "primary-container": "#EFF6FF",
+        "primary-hover": "#1E40AF",
+        "on-primary": "#FFFFFF",
+        "on-primary-container": "#1E40AF",
+        "primary-fixed": "rgba(29, 78, 216, 0.08)",
+        "primary-fixed-dim": "rgba(29, 78, 216, 0.15)",
+        "on-primary-fixed": "#1D4ED8",
+
+        // Secondary & Micro-Accents: Refined Cerulean, Violet, and Emerald
+        "secondary": "#64748B",
+        "secondary-container": "rgba(100, 116, 139, 0.08)",
+        "on-secondary": "#1E293B",
+        "on-secondary-fixed": "#334155",
+        "on-secondary-container": "#475569",
+
+        "cyan-accent": "#0284C7",
+        "cyan-soft": "#F0F9FF",
+        "violet-accent": "#7C3AED",
+        "violet-soft": "#F5F3FF",
+        "emerald-accent": "#059669",
+        "emerald-soft": "#ECFDF5",
+
+        "tertiary": "#0284C7",
+        "tertiary-container": "#E0F2FE",
+        "on-tertiary-container": "#0369A1",
+        "error": "#DC2626",
+        "error-container": "rgba(220, 38, 38, 0.08)"
       },
       fontFamily: {
         display: ['"Plus Jakarta Sans"', 'sans-serif'],
-        headline: ['"Plus Jakarta Sans"', 'sans-serif'],
+        headline: ['"Space Grotesk"', 'sans-serif'],
+        tech: ['"Space Grotesk"', 'sans-serif'],
         body: ['Inter', 'sans-serif'],
         mono: ['"JetBrains Mono"', 'monospace'],
         'code-badge': ['"JetBrains Mono"', 'monospace']
@@ -68,10 +89,13 @@ export default {
         'space-3xl': '6rem'
       },
       boxShadow: {
-        'subtle': '0 1px 3px 0 rgba(15, 23, 42, 0.04), 0 1px 2px -1px rgba(15, 23, 42, 0.03)',
-        'elevated': '0 10px 25px -5px rgba(15, 23, 42, 0.06), 0 8px 10px -6px rgba(15, 23, 42, 0.04)',
-        'modal': '0 20px 30px -10px rgba(15, 23, 42, 0.1), 0 10px 15px -5px rgba(15, 23, 42, 0.05)',
-        'glow-primary': '0 4px 14px 0 rgba(29, 78, 216, 0.35)'
+        'subtle': '0 1px 3px 0 rgba(0, 0, 0, 0.04), 0 1px 2px -1px rgba(0, 0, 0, 0.03)',
+        'elevated': '0 10px 25px -4px rgba(0, 0, 0, 0.06), 0 4px 6px -2px rgba(0, 0, 0, 0.03)',
+        'card-glow': '0 12px 32px -4px rgba(29, 78, 216, 0.1)',
+        'modal': '0 25px 50px -12px rgba(15, 23, 42, 0.25)',
+        'glow-primary': '0 8px 20px -3px rgba(29, 78, 216, 0.28)',
+        'glow-cyan': '0 8px 20px -3px rgba(2, 132, 199, 0.25)',
+        'glow-violet': '0 8px 20px -3px rgba(124, 58, 237, 0.25)'
       }
     },
   },

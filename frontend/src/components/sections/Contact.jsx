@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { api } from '../../services/api';
 
 export default function Contact({ profile, onShowToast }) {
-  const emailAddress = profile?.email || '2405301078@geetauniversity.edu.in';
-  const linkedinUrl = profile?.linkedin || 'https://www.linkedin.com/in/pushpa-rani-36b652a9';
+  const emailAddress = "pushparani10290@gmail.com";
+  const linkedinUrl = "https://www.linkedin.com/in/pushpa-rani-36b6052a9/";
 
   const [formData, setFormData] = useState({
     name: '',
@@ -18,9 +18,9 @@ export default function Contact({ profile, onShowToast }) {
 
   const subjectOptions = [
     'Recruitment Opportunity',
-    'Project Collaboration',
     'Data Analytics / BI Inquiry',
     'AI Workflow Consultation',
+    'Project Collaboration',
     'General Inquiry'
   ];
 
@@ -40,7 +40,7 @@ export default function Contact({ profile, onShowToast }) {
     }
 
     if (!formData.subject.trim()) {
-      errors.subject = 'Please select or enter a subject';
+      errors.subject = 'Please select a subject';
     }
 
     if (!formData.message.trim()) {
@@ -78,104 +78,134 @@ export default function Contact({ profile, onShowToast }) {
         subject: 'Recruitment Opportunity',
         message: ''
       });
-      onShowToast({
-        type: 'success',
-        message: response.message || 'Your inquiry has been submitted to Pushpa Rani successfully!'
-      });
+      if (onShowToast) {
+        onShowToast({
+          type: 'success',
+          message: response?.message || 'Your inquiry has been submitted to Pushpa Rani successfully!'
+        });
+      }
     } catch (err) {
       setIsSubmitting(false);
-      onShowToast({
-        type: 'error',
-        message: err.message || 'Failed to submit inquiry. Please try again or email directly.'
-      });
+      if (onShowToast) {
+        onShowToast({
+          type: 'error',
+          message: err?.message || 'Failed to submit inquiry. Please use the direct Email button below.'
+        });
+      }
     }
   };
 
   return (
-    <section className="w-full max-w-[80rem] mx-auto px-margin-mobile lg:px-margin py-space-xl lg:py-space-2xl" id="contact">
-      <div className="bg-surface-container-lowest rounded-3xl p-space-lg lg:p-space-2xl shadow-xl border border-outline-variant/30 relative overflow-hidden">
-        {/* Glow Micro-Accents */}
-        <div className="absolute -right-20 -bottom-20 w-80 h-80 rounded-full bg-surface-variant opacity-60 blur-3xl pointer-events-none" />
+    <section className="w-full max-w-[82rem] mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-28" id="contact">
+      <div className="bg-[#F4F3EE] rounded-3xl p-6 sm:p-10 lg:p-14 relative overflow-hidden border border-slate-200/90 shadow-subtle">
+        {/* Soft Background Accents */}
+        <div className="absolute -right-24 -bottom-24 w-96 h-96 rounded-full bg-blue-500/5 blur-[120px] pointer-events-none -z-10" />
+        <div className="absolute -left-24 -top-24 w-96 h-96 rounded-full bg-sky-500/5 blur-[120px] pointer-events-none -z-10" />
 
-        <div className="flex flex-col gap-space-xl relative z-10">
+        <div className="flex flex-col gap-10 sm:gap-12 relative z-10">
           {/* Header */}
-          <div className="flex flex-col gap-space-xs max-w-2xl">
-            <div className="inline-flex items-center gap-2 text-primary font-code-badge text-xs tracking-wider uppercase font-semibold">
-              <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
-              Direct Collaboration
+          <div className="flex flex-col gap-2 max-w-2xl">
+            <div className="inline-flex items-center gap-2 text-blue-700 font-mono text-xs tracking-wider uppercase font-semibold">
+              <span className="w-1.5 h-1.5 rounded-full bg-blue-600 shadow-[0_0_6px_#2563eb] animate-pulse" />
+              07 / Direct Reach-Out
             </div>
-            <h2 className="font-display font-bold text-3xl sm:text-4xl text-on-surface">
-              Let&apos;s Connect
+            <h2 className="font-headline font-bold font-section-headline text-slate-950 tracking-tight">
+              Let&apos;s Build Something <span className="text-blue-600">Intelligent</span>
             </h2>
-            <p className="font-body text-base sm:text-lg text-on-surface-variant leading-relaxed">
-              I&apos;m open to opportunities involving business, analytics, technology and creative problem-solving.
+            <p className="font-body text-base sm:text-lg text-slate-600 leading-relaxed pt-1">
+              Actively open to high-impact internships, quantitative data analytics roles, business intelligence consulting, and creative technology collaboration.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
-            {/* Left 5 Cols: Direct Channel Cards */}
-            <div className="lg:col-span-5 flex flex-col gap-space-md">
-              {/* Email Card */}
-              <div className="p-space-lg rounded-3xl bg-surface-container-low border border-outline-variant/30 flex flex-col justify-between gap-4 shadow-sm hover:shadow-md transition-all">
-                <div className="flex flex-col gap-3">
-                  <div className="w-12 h-12 rounded-2xl bg-surface-container-lowest flex items-center justify-center text-primary shadow-sm">
-                    <span className="material-symbols-outlined text-[24px]">mail</span>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            {/* Left 5 Cols: Direct Contact Channels (Official Email & LinkedIn) */}
+            <div className="lg:col-span-5 flex flex-col gap-6">
+              {/* Official Email Card — Guaranteed mailto link */}
+              <div className="p-6 sm:p-8 rounded-3xl bg-white border border-slate-200/90 shadow-subtle flex flex-col justify-between gap-6 transition-all hover:shadow-elevated hover:border-blue-300 group">
+                <div className="flex flex-col gap-4">
+                  <div className="w-12 h-12 rounded-2xl bg-blue-50 text-blue-600 border border-blue-100 flex items-center justify-center shadow-sm">
+                    <span className="material-symbols-outlined text-[26px]">mail</span>
                   </div>
-                  <div className="flex flex-col">
-                    <span className="font-code-badge text-xs text-secondary uppercase font-semibold tracking-wider">
-                      Email Address
+
+                  <div className="flex flex-col gap-1">
+                    <span className="font-mono text-xs text-slate-400 uppercase font-semibold tracking-wider">
+                      DIRECT EMAIL ACCESS
                     </span>
+                    {/* Clickable visible email anchor */}
                     <a
                       href={`mailto:${emailAddress}`}
-                      className="font-display font-bold text-base sm:text-lg text-on-surface hover:text-primary transition-colors break-all pt-1"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        window.location.href = `mailto:${emailAddress}`;
+                      }}
+                      id="contact-visible-email"
+                      className="font-headline font-bold text-base sm:text-lg text-slate-950 hover:text-blue-600 transition-colors break-all pt-1 cursor-pointer"
+                      title={`Click to open default email client to email ${emailAddress}`}
                     >
                       {emailAddress}
                     </a>
                   </div>
-                  <p className="font-body text-xs text-on-surface-variant leading-relaxed">
-                    Reach out directly for internships, project inquiries, or analytical opportunities.
+
+                  <p className="font-body text-xs sm:text-sm text-slate-600 leading-relaxed">
+                    Direct reach-out for recruiters, internships, data analytics opportunities, and executive project discussions.
                   </p>
                 </div>
+
                 <div>
+                  {/* Semantic CTA button with guaranteed mailto */}
                   <a
                     href={`mailto:${emailAddress}`}
-                    className="inline-flex items-center justify-center gap-2 px-space-lg py-2.5 rounded-xl bg-primary-container hover:bg-primary text-on-primary font-display text-xs font-bold shadow-md transition-all w-full sm:w-auto"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      window.location.href = `mailto:${emailAddress}`;
+                    }}
+                    id="contact-email-pushpa-button"
+                    className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-headline text-xs font-bold shadow-glow-primary hover:shadow-lg transition-all duration-200 w-full sm:w-auto cursor-pointer"
+                    title={`Send an email directly to ${emailAddress}`}
                   >
-                    <span>Email Me</span>
+                    <span>Email Pushpa</span>
                     <span className="material-symbols-outlined text-[16px]">send</span>
                   </a>
                 </div>
               </div>
 
-              {/* LinkedIn Card */}
-              <div className="p-space-lg rounded-3xl bg-surface-container-low border border-outline-variant/30 flex flex-col justify-between gap-4 shadow-sm hover:shadow-md transition-all">
-                <div className="flex flex-col gap-3">
-                  <div className="w-12 h-12 rounded-2xl bg-surface-container-lowest flex items-center justify-center text-primary shadow-sm">
-                    <span className="material-symbols-outlined text-[24px]">share</span>
+              {/* Verified LinkedIn Card */}
+              <div className="p-6 sm:p-8 rounded-3xl bg-white border border-slate-200/90 shadow-subtle flex flex-col justify-between gap-6 transition-all hover:shadow-elevated hover:border-sky-300 group">
+                <div className="flex flex-col gap-4">
+                  <div className="w-12 h-12 rounded-2xl bg-sky-50 text-sky-600 border border-sky-100 flex items-center justify-center shadow-sm">
+                    <span className="material-symbols-outlined text-[26px]">share</span>
                   </div>
-                  <div className="flex flex-col">
-                    <span className="font-code-badge text-xs text-secondary uppercase font-semibold tracking-wider">
-                      LinkedIn Profile
+
+                  <div className="flex flex-col gap-1">
+                    <span className="font-mono text-xs text-slate-400 uppercase font-semibold tracking-wider">
+                      PROFESSIONAL NETWORK
                     </span>
+                    {/* Clickable visible LinkedIn anchor */}
                     <a
                       href={linkedinUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="font-display font-bold text-base sm:text-lg text-on-surface hover:text-primary transition-colors pt-1"
+                      id="contact-visible-linkedin"
+                      className="font-headline font-bold text-base sm:text-lg text-slate-950 hover:text-sky-600 transition-colors pt-1"
+                      title="Open Pushpa Rani's verified LinkedIn profile in a new tab"
                     >
                       Pushpa Rani
                     </a>
                   </div>
-                  <p className="font-body text-xs text-on-surface-variant leading-relaxed">
-                    Connect professionally, explore background updates, and build industry connections.
+
+                  <p className="font-body text-xs sm:text-sm text-slate-600 leading-relaxed">
+                    Connect professionally on LinkedIn, review academic updates, and initiate recruiter conversations directly.
                   </p>
                 </div>
+
                 <div>
                   <a
                     href={linkedinUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2 px-space-lg py-2.5 rounded-xl bg-surface-container-lowest hover:bg-surface-container text-primary font-display text-xs font-bold border border-outline-variant/30 shadow-sm transition-all w-full sm:w-auto"
+                    id="contact-linkedin-button"
+                    className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-sky-50 hover:bg-sky-100 text-sky-700 font-headline text-xs font-bold border border-sky-200 shadow-sm transition-all duration-200 w-full sm:w-auto"
+                    title="Open LinkedIn profile"
                   >
                     <span>Connect on LinkedIn</span>
                     <span className="material-symbols-outlined text-[16px]">open_in_new</span>
@@ -184,15 +214,16 @@ export default function Contact({ profile, onShowToast }) {
               </div>
             </div>
 
-            {/* Right 7 Cols: Full-Stack Contact Form */}
-            <div className="lg:col-span-7 bg-surface-container-low/70 border border-outline-variant/30 rounded-3xl p-6 sm:p-8 flex flex-col gap-5">
-              <div className="flex items-center justify-between pb-2 border-b border-outline-variant/20">
-                <div className="flex items-center gap-2">
-                  <span className="material-symbols-outlined text-primary text-[22px]">contact_mail</span>
-                  <h3 className="font-display font-bold text-lg text-on-surface">Send a Message</h3>
+            {/* Right 7 Cols: Direct Message Transmission Form */}
+            <div className="lg:col-span-7 bg-white border border-slate-200/90 rounded-3xl p-6 sm:p-8 lg:p-10 shadow-subtle flex flex-col gap-6">
+              <div className="flex items-center justify-between pb-4 border-b border-slate-100">
+                <div className="flex items-center gap-2.5">
+                  <span className="material-symbols-outlined text-blue-600 text-[24px]">contact_mail</span>
+                  <h3 className="font-headline font-bold text-lg sm:text-xl text-slate-950">Send a Direct Message</h3>
                 </div>
-                <span className="font-code-badge text-[11px] text-secondary flex items-center gap-1">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> REST API Active
+                <span className="font-mono text-[11px] text-slate-500 flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shadow-[0_0_6px_#10b981]" />
+                  REST API Active
                 </span>
               </div>
 
@@ -200,9 +231,9 @@ export default function Contact({ profile, onShowToast }) {
                 <div className="p-4 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-900 flex items-start gap-3">
                   <span className="material-symbols-outlined text-emerald-600 text-[22px] mt-0.5">check_circle</span>
                   <div className="flex flex-col">
-                    <span className="font-display font-bold text-sm">Message Sent Successfully!</span>
-                    <p className="font-body text-xs text-emerald-800 mt-0.5">
-                      Thank you for contacting Pushpa Rani. Your message has been saved in the system, and a reply will follow shortly.
+                    <span className="font-headline font-bold text-sm text-emerald-950">Message Sent!</span>
+                    <p className="font-body text-xs text-emerald-700 mt-0.5">
+                      Thank you for reaching out. Your transmission has been logged and Pushpa will review it promptly.
                     </p>
                   </div>
                 </div>
@@ -212,8 +243,8 @@ export default function Contact({ profile, onShowToast }) {
                 {/* Name & Email Row */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="flex flex-col gap-1.5">
-                    <label htmlFor="name" className="font-display text-xs font-semibold text-on-surface">
-                      Your Name <span className="text-error">*</span>
+                    <label htmlFor="name" className="font-headline text-xs font-semibold text-slate-700">
+                      Your Name <span className="text-red-500">*</span>
                     </label>
                     <input
                       id="name"
@@ -221,21 +252,21 @@ export default function Contact({ profile, onShowToast }) {
                       type="text"
                       value={formData.name}
                       onChange={handleChange}
-                      placeholder="e.g. Rahul Sharma"
-                      className={`px-3.5 py-2.5 rounded-xl bg-surface-container-lowest border text-xs text-on-surface focus:outline-none transition-colors ${
+                      placeholder="e.g. Talent Acquisition Lead"
+                      className={`px-3.5 py-2.5 rounded-xl bg-slate-50 border text-xs text-slate-900 placeholder:text-slate-400 focus:outline-none focus:bg-white transition-colors ${
                         formErrors.name 
-                          ? 'border-error focus:ring-1 focus:ring-error' 
-                          : 'border-outline-variant/50 focus:border-primary focus:ring-1 focus:ring-primary'
+                          ? 'border-red-500 focus:ring-1 focus:ring-red-500' 
+                          : 'border-slate-200 focus:border-blue-500 focus:ring-1 focus:ring-blue-500'
                       }`}
                     />
                     {formErrors.name && (
-                      <span className="text-[11px] text-error font-medium">{formErrors.name}</span>
+                      <span className="text-[11px] text-red-500 font-medium">{formErrors.name}</span>
                     )}
                   </div>
 
                   <div className="flex flex-col gap-1.5">
-                    <label htmlFor="email" className="font-display text-xs font-semibold text-on-surface">
-                      Email Address <span className="text-error">*</span>
+                    <label htmlFor="email" className="font-headline text-xs font-semibold text-slate-700">
+                      Email Address <span className="text-red-500">*</span>
                     </label>
                     <input
                       id="email"
@@ -243,33 +274,33 @@ export default function Contact({ profile, onShowToast }) {
                       type="email"
                       value={formData.email}
                       onChange={handleChange}
-                      placeholder="name@company.com"
-                      className={`px-3.5 py-2.5 rounded-xl bg-surface-container-lowest border text-xs text-on-surface focus:outline-none transition-colors ${
+                      placeholder="recruiter@enterprise.com"
+                      className={`px-3.5 py-2.5 rounded-xl bg-slate-50 border text-xs text-slate-900 placeholder:text-slate-400 focus:outline-none focus:bg-white transition-colors ${
                         formErrors.email 
-                          ? 'border-error focus:ring-1 focus:ring-error' 
-                          : 'border-outline-variant/50 focus:border-primary focus:ring-1 focus:ring-primary'
+                          ? 'border-red-500 focus:ring-1 focus:ring-red-500' 
+                          : 'border-slate-200 focus:border-blue-500 focus:ring-1 focus:ring-blue-500'
                       }`}
                     />
                     {formErrors.email && (
-                      <span className="text-[11px] text-error font-medium">{formErrors.email}</span>
+                      <span className="text-[11px] text-red-500 font-medium">{formErrors.email}</span>
                     )}
                   </div>
                 </div>
 
                 {/* Subject Selection */}
                 <div className="flex flex-col gap-1.5">
-                  <label htmlFor="subject" className="font-display text-xs font-semibold text-on-surface">
-                    Inquiry Topic / Category <span className="text-error">*</span>
+                  <label htmlFor="subject" className="font-headline text-xs font-semibold text-slate-700">
+                    Topic / Category <span className="text-red-500">*</span>
                   </label>
                   <select
                     id="subject"
                     name="subject"
                     value={formData.subject}
                     onChange={handleChange}
-                    className="px-3.5 py-2.5 rounded-xl bg-surface-container-lowest border border-outline-variant/50 text-xs text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary"
+                    className="px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-900 focus:outline-none focus:bg-white focus:border-blue-500 transition-colors"
                   >
                     {subjectOptions.map((opt) => (
-                      <option key={opt} value={opt}>
+                      <option key={opt} value={opt} className="bg-white text-slate-900">
                         {opt}
                       </option>
                     ))}
@@ -278,8 +309,8 @@ export default function Contact({ profile, onShowToast }) {
 
                 {/* Message */}
                 <div className="flex flex-col gap-1.5">
-                  <label htmlFor="message" className="font-display text-xs font-semibold text-on-surface">
-                    Message <span className="text-error">*</span>
+                  <label htmlFor="message" className="font-headline text-xs font-semibold text-slate-700">
+                    Message <span className="text-red-500">*</span>
                   </label>
                   <textarea
                     id="message"
@@ -287,15 +318,15 @@ export default function Contact({ profile, onShowToast }) {
                     rows={4}
                     value={formData.message}
                     onChange={handleChange}
-                    placeholder="Describe your project, team role, or collaborative opportunity in detail..."
-                    className={`px-3.5 py-2.5 rounded-xl bg-surface-container-lowest border text-xs text-on-surface focus:outline-none transition-colors ${
+                    placeholder="Outline your team's role, collaborative initiative, or project scope..."
+                    className={`px-3.5 py-2.5 rounded-xl bg-slate-50 border text-xs text-slate-900 placeholder:text-slate-400 focus:outline-none focus:bg-white transition-colors ${
                       formErrors.message 
-                        ? 'border-error focus:ring-1 focus:ring-error' 
-                        : 'border-outline-variant/50 focus:border-primary focus:ring-1 focus:ring-primary'
+                        ? 'border-red-500 focus:ring-1 focus:ring-red-500' 
+                        : 'border-slate-200 focus:border-blue-500 focus:ring-1 focus:ring-blue-500'
                     }`}
                   />
                   {formErrors.message && (
-                    <span className="text-[11px] text-error font-medium">{formErrors.message}</span>
+                    <span className="text-[11px] text-red-500 font-medium">{formErrors.message}</span>
                   )}
                 </div>
 
@@ -303,18 +334,18 @@ export default function Contact({ profile, onShowToast }) {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className={`mt-1 inline-flex items-center justify-center gap-2 py-3 px-6 rounded-xl font-display text-xs font-bold text-on-primary bg-primary-container hover:bg-primary shadow-md hover:shadow-lg transition-all ${
+                  className={`mt-1 inline-flex items-center justify-center gap-2 py-3 px-6 rounded-xl font-headline text-xs font-bold text-white bg-blue-600 hover:bg-blue-700 shadow-glow-primary transition-all duration-200 ${
                     isSubmitting ? 'opacity-70 cursor-not-allowed' : 'active:scale-98'
                   }`}
                 >
                   {isSubmitting ? (
                     <>
-                      <span className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"></span>
-                      <span>Submitting via REST API...</span>
+                      <span className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                      <span>Transmitting via REST API...</span>
                     </>
                   ) : (
                     <>
-                      <span>Send Message</span>
+                      <span>Transmit Message</span>
                       <span className="material-symbols-outlined text-[16px]">send</span>
                     </>
                   )}

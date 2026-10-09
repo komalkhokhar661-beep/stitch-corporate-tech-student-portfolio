@@ -5,6 +5,8 @@ export default function Navbar({ backendConnected }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
+  const emailAddress = "pushparani10290@gmail.com";
+
   const navLinks = [
     { label: 'Home', href: '#home', id: 'home' },
     { label: 'About', href: '#about', id: 'about' },
@@ -46,36 +48,39 @@ export default function Navbar({ backendConnected }) {
   };
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      scrolled 
-        ? 'bg-surface/90 backdrop-blur-xl shadow-[0_2px_12px_rgba(11,28,48,0.06)] border-b border-outline-variant/30' 
-        : 'bg-surface/85 backdrop-blur-lg'
-    }`}>
-      <div className="h-20 max-w-[80rem] mx-auto px-margin-mobile lg:px-margin flex items-center justify-between gap-gutter">
-        {/* Brand / Logo */}
-        <div className="flex items-center gap-space-md">
-          <a 
-            href="#home" 
-            onClick={(e) => handleNavClick(e, '#home')}
-            className="flex items-center gap-space-sm group"
-          >
-            <div className="w-10 h-10 rounded-xl bg-primary text-on-primary flex items-center justify-center font-display font-bold text-lg shadow-sm group-hover:bg-primary-container transition-colors">
+    <header 
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled 
+          ? 'glass-nav border-b border-slate-200/80 shadow-[0_4px_24px_rgba(17,24,39,0.04)]' 
+          : 'bg-[#FAF9F5]/92 backdrop-blur-md border-b border-slate-200/60'
+      }`}
+    >
+      <div className="h-20 max-w-[82rem] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+        {/* Monogram Brand */}
+        <a 
+          href="#home" 
+          onClick={(e) => handleNavClick(e, '#home')}
+          className="flex items-center gap-3 group"
+          id="nav-logo"
+        >
+          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 via-blue-500 to-indigo-600 p-[1.5px] shadow-sm transition-transform duration-300 group-hover:scale-105">
+            <div className="w-full h-full bg-white rounded-[10px] flex items-center justify-center font-headline font-bold text-lg text-blue-600">
               P
             </div>
-            <div className="flex flex-col">
-              <span className="font-display font-bold text-lg text-on-surface tracking-tight group-hover:text-primary transition-colors">
-                Pushpa Rani
-              </span>
-              <span className="inline-flex items-center gap-1.5 text-xs text-primary font-code-badge font-semibold">
-                <span className={`w-2 h-2 rounded-full ${backendConnected ? 'bg-emerald-500' : 'bg-amber-500'} animate-pulse`}></span>
-                BBA • Analytics &amp; AI
-              </span>
-            </div>
-          </a>
-        </div>
+          </div>
+          <div className="flex flex-col">
+            <span className="font-headline font-bold text-base text-slate-950 tracking-tight group-hover:text-blue-600 transition-colors">
+              Pushpa Rani
+            </span>
+            <span className="inline-flex items-center gap-1.5 text-[11px] font-mono text-slate-500">
+              <span className={`w-1.5 h-1.5 rounded-full ${backendConnected ? 'bg-emerald-500' : 'bg-blue-500'} animate-pulse`} />
+              BBA • Data Analytics &amp; AI
+            </span>
+          </div>
+        </a>
 
         {/* Desktop Nav Items */}
-        <nav className="hidden xl:flex items-center gap-6 lg:gap-7">
+        <nav className="hidden xl:flex items-center gap-1 p-1 rounded-full bg-white/95 border border-slate-200/90 shadow-subtle backdrop-blur-md">
           {navLinks.map((link) => {
             const isActive = activeSection === link.id;
             return (
@@ -83,70 +88,77 @@ export default function Navbar({ backendConnected }) {
                 key={link.id}
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link.href)}
-                className={`font-display text-sm transition-all relative py-1 ${
+                className={`font-display text-xs px-3.5 py-1.5 rounded-full transition-all duration-200 ${
                   isActive
-                    ? 'text-primary font-bold'
-                    : 'text-on-surface-variant font-medium hover:text-primary'
+                    ? 'bg-blue-600 text-white font-semibold shadow-glow-primary'
+                    : 'text-slate-600 hover:text-slate-950 hover:bg-slate-100/80'
                 }`}
               >
                 {link.label}
-                {isActive && (
-                  <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary-container rounded-full animate-fade-in" />
-                )}
               </a>
             );
           })}
         </nav>
 
-        {/* Right CTA & Mobile Toggle */}
-        <div className="flex items-center gap-space-sm">
+        {/* Right CTAs & Mobile Menu Toggle */}
+        <div className="flex items-center gap-3">
           <a
-            href="#contact"
-            onClick={(e) => handleNavClick(e, '#contact')}
-            className="hidden sm:inline-flex items-center justify-center gap-2 px-space-lg py-2.5 rounded-lg bg-primary-container hover:bg-primary text-on-primary font-display text-sm font-semibold shadow-[0_4px_14px_0_rgba(29,78,216,0.25)] hover:shadow-lg transition-all transform active:scale-95"
+            href={`mailto:${emailAddress}`}
+            onClick={(e) => {
+              e.stopPropagation();
+              window.location.href = `mailto:${emailAddress}`;
+            }}
+            id="nav-direct-email-button"
+            className="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-headline text-xs font-semibold tracking-wide shadow-glow-primary transition-all duration-200 transform active:scale-95 cursor-pointer"
+            title={`Direct Email to ${emailAddress}`}
           >
-            <span>Get in Touch</span>
-            <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
+            <span>Email Pushpa</span>
+            <span className="material-symbols-outlined text-[15px]">send</span>
           </a>
 
-          {/* Mobile Menu Button */}
           <button
             type="button"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="xl:hidden p-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors"
-            aria-label="Toggle Navigation Menu"
+            className="xl:hidden p-2 rounded-xl bg-white border border-slate-200 text-slate-700 hover:text-slate-950 hover:bg-slate-50 transition-colors shadow-subtle"
+            aria-label="Toggle navigation menu"
           >
-            <span className="material-symbols-outlined text-[24px]">
+            <span className="material-symbols-outlined text-[22px]">
               {mobileMenuOpen ? 'close' : 'menu'}
             </span>
           </button>
         </div>
       </div>
 
-      {/* Mobile Drawer */}
+      {/* Mobile Menu Dropdown */}
       {mobileMenuOpen && (
-        <div className="xl:hidden bg-surface-container-lowest/98 backdrop-blur-2xl border-b border-outline-variant/30 px-6 py-6 shadow-xl flex flex-col gap-3 animate-fadeIn">
+        <div className="xl:hidden bg-white/98 backdrop-blur-2xl border-b border-slate-200 px-5 py-5 shadow-2xl flex flex-col gap-2">
           {navLinks.map((link) => (
             <a
               key={link.id}
               href={link.href}
               onClick={(e) => handleNavClick(e, link.href)}
-              className={`px-4 py-2.5 rounded-xl font-display text-base transition-colors ${
+              className={`px-4 py-2.5 rounded-xl font-display text-sm transition-colors ${
                 activeSection === link.id
-                  ? 'bg-primary-fixed text-on-primary-fixed font-bold'
-                  : 'text-on-surface hover:bg-surface-container-low font-medium'
+                  ? 'bg-blue-50 text-blue-700 font-semibold border border-blue-200'
+                  : 'text-slate-700 hover:bg-slate-50'
               }`}
             >
               {link.label}
             </a>
           ))}
-          <a
-            href="#contact"
-            onClick={(e) => handleNavClick(e, '#contact')}
-            className="mt-2 text-center py-3 rounded-xl bg-primary-container text-on-primary font-display font-semibold shadow-md"
-          >
-            Get in Touch
-          </a>
+          <div className="pt-2 border-t border-slate-100 flex flex-col gap-2">
+            <a
+              href={`mailto:${emailAddress}`}
+              onClick={(e) => {
+                e.stopPropagation();
+                window.location.href = `mailto:${emailAddress}`;
+              }}
+              className="flex items-center justify-center gap-2 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-headline text-xs font-semibold shadow-glow-primary cursor-pointer"
+            >
+              <span>Email Pushpa</span>
+              <span className="material-symbols-outlined text-[15px]">send</span>
+            </a>
+          </div>
         </div>
       )}
     </header>
