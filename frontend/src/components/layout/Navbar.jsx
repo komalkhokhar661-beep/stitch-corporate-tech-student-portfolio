@@ -103,8 +103,9 @@ export default function Navbar({ backendConnected }) {
         {/* Right CTAs & Mobile Menu Toggle */}
         <div className="flex items-center gap-3">
           <a
-            href={`mailto:${emailAddress}`}
-            target="_self"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=pushparani10290@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
             id="nav-direct-email-button"
             className="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-headline text-xs font-semibold tracking-wide shadow-glow-primary transition-all duration-200 transform active:scale-95 cursor-pointer relative z-10"
             title={`Direct Email to ${emailAddress}`}
@@ -145,8 +146,9 @@ export default function Navbar({ backendConnected }) {
           ))}
           <div className="pt-2 border-t border-slate-100 flex flex-col gap-2">
             <a
-              href={`mailto:${emailAddress}`}
-              target="_self"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=pushparani10290@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => setMobileMenuOpen(false)}
               className="flex items-center justify-center gap-2 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-headline text-xs font-semibold shadow-glow-primary cursor-pointer"
             >

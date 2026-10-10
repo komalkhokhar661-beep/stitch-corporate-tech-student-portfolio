@@ -74,8 +74,9 @@ export default function Hero({ profile, onOpenResume }) {
             </button>
 
             <a
-              href={`mailto:${emailAddress}`}
-              target="_self"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=pushparani10290@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
               id="hero-email-btn"
               className="inline-flex items-center justify-center gap-2 px-4 py-3.5 rounded-xl bg-white hover:bg-blue-50 text-slate-700 hover:text-blue-600 font-headline text-sm font-semibold border border-slate-200/90 hover:border-blue-300 transition-all duration-200 shadow-subtle cursor-pointer relative z-10"
               title={`Email Pushpa at ${emailAddress}`}

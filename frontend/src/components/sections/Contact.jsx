@@ -133,11 +133,12 @@ export default function Contact({ profile, onShowToast }) {
                     </span>
                     {/* Clickable visible email anchor */}
                     <a
-                      href={`mailto:${emailAddress}`}
-                      target="_self"
+                      href="https://mail.google.com/mail/?view=cm&fs=1&to=pushparani10290@gmail.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       id="contact-visible-email"
                       className="font-headline font-bold text-base sm:text-lg text-slate-950 hover:text-blue-600 transition-colors break-all pt-1 cursor-pointer relative z-10"
-                      title={`Click to open default email client to email ${emailAddress}`}
+                      title={`Click to compose email to ${emailAddress} in Gmail`}
                     >
                       {emailAddress}
                     </a>
@@ -149,10 +150,11 @@ export default function Contact({ profile, onShowToast }) {
                 </div>
 
                 <div>
-                  {/* Semantic CTA button with guaranteed mailto */}
+                  {/* Semantic CTA button linking to Gmail Compose */}
                   <a
-                    href={`mailto:${emailAddress}`}
-                    target="_self"
+                    href="https://mail.google.com/mail/?view=cm&fs=1&to=pushparani10290@gmail.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     id="contact-email-pushpa-button"
                     className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-headline text-xs font-bold shadow-glow-primary hover:shadow-lg transition-all duration-200 w-full sm:w-auto cursor-pointer relative z-10"
                     title={`Send an email directly to ${emailAddress}`}

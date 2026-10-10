@@ -16,11 +16,12 @@ export default function Footer({ profile }) {
               </span>
             </div>
             <a
-              href={`mailto:${email}`}
-              target="_self"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=pushparani10290@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
               id="footer-email-link"
               className="font-mono text-xs text-slate-500 hover:text-blue-600 transition-colors pt-1 cursor-pointer relative z-10"
-              title={`Click to email ${email}`}
+              title={`Click to email ${email} in Gmail`}
             >
               {email}
             </a>
@@ -39,12 +40,13 @@ export default function Footer({ profile }) {
               <span>LinkedIn</span>
             </a>
             <a
-              href={`mailto:${email}`}
-              target="_self"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=pushparani10290@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
               id="footer-email-btn"
               aria-label="Email Pushpa Rani"
               className="px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-white flex items-center gap-2 text-xs font-headline font-semibold shadow-glow-primary transition-all duration-200 cursor-pointer relative z-10"
-              title={`Direct email to ${email}`}
+              title={`Direct email to ${email} in Gmail`}
             >
               <span className="material-symbols-outlined text-[18px] pointer-events-none">mail</span>
               <span className="pointer-events-none">Email Pushpa</span>

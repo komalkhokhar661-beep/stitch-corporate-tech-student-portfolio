@@ -63,10 +63,11 @@ export default function ResumeModal({ isOpen, onClose, profile, education, exper
             </p>
             <div className="flex flex-wrap gap-4 text-xs font-mono text-slate-600 mt-2">
               <a 
-                href={`mailto:${emailAddress}`}
-                target="_self"
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=pushparani10290@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="hover:text-blue-600 transition-colors flex items-center gap-1 cursor-pointer"
-                title={`Email ${emailAddress}`}
+                title={`Email ${emailAddress} in Gmail`}
               >
                 <span>📧 {emailAddress}</span>
               </a>
