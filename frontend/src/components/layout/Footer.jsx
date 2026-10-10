@@ -17,12 +17,9 @@ export default function Footer({ profile }) {
             </div>
             <a
               href={`mailto:${email}`}
-              onClick={(e) => {
-                e.stopPropagation();
-                window.location.href = `mailto:${email}`;
-              }}
+              target="_self"
               id="footer-email-link"
-              className="font-mono text-xs text-slate-500 hover:text-blue-600 transition-colors pt-1 cursor-pointer"
+              className="font-mono text-xs text-slate-500 hover:text-blue-600 transition-colors pt-1 cursor-pointer relative z-10"
               title={`Click to email ${email}`}
             >
               {email}
@@ -43,17 +40,14 @@ export default function Footer({ profile }) {
             </a>
             <a
               href={`mailto:${email}`}
-              onClick={(e) => {
-                e.stopPropagation();
-                window.location.href = `mailto:${email}`;
-              }}
+              target="_self"
               id="footer-email-btn"
               aria-label="Email Pushpa Rani"
-              className="px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-white flex items-center gap-2 text-xs font-headline font-semibold shadow-glow-primary transition-all duration-200 cursor-pointer"
+              className="px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-white flex items-center gap-2 text-xs font-headline font-semibold shadow-glow-primary transition-all duration-200 cursor-pointer relative z-10"
               title={`Direct email to ${email}`}
             >
-              <span className="material-symbols-outlined text-[18px]">mail</span>
-              <span>Email Pushpa</span>
+              <span className="material-symbols-outlined text-[18px] pointer-events-none">mail</span>
+              <span className="pointer-events-none">Email Pushpa</span>
             </a>
           </div>
         </div>

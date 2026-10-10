@@ -75,16 +75,13 @@ export default function Hero({ profile, onOpenResume }) {
 
             <a
               href={`mailto:${emailAddress}`}
-              onClick={(e) => {
-                e.stopPropagation();
-                window.location.href = `mailto:${emailAddress}`;
-              }}
+              target="_self"
               id="hero-email-btn"
-              className="inline-flex items-center justify-center gap-2 px-4 py-3.5 rounded-xl bg-white hover:bg-blue-50 text-slate-700 hover:text-blue-600 font-headline text-sm font-semibold border border-slate-200/90 hover:border-blue-300 transition-all duration-200 shadow-subtle cursor-pointer"
+              className="inline-flex items-center justify-center gap-2 px-4 py-3.5 rounded-xl bg-white hover:bg-blue-50 text-slate-700 hover:text-blue-600 font-headline text-sm font-semibold border border-slate-200/90 hover:border-blue-300 transition-all duration-200 shadow-subtle cursor-pointer relative z-10"
               title={`Email Pushpa at ${emailAddress}`}
             >
-              <span className="material-symbols-outlined text-[18px]">mail</span>
-              <span className="hidden sm:inline">Email</span>
+              <span className="material-symbols-outlined text-[18px] pointer-events-none">mail</span>
+              <span className="hidden sm:inline pointer-events-none">Email</span>
             </a>
 
             <a
